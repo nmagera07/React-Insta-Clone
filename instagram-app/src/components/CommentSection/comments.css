@@ -1,0 +1,14 @@
+.comments {
+    display: flex;
+    width: 600px;
+}
+
+.comments h3 {
+    font-size: 1rem;
+    margin-left: 2%;
+}
+
+.comments p {
+    font-size: 1rem;
+    margin-left: 1%;
+}

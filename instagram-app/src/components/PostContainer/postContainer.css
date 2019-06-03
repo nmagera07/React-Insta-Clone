@@ -1,0 +1,41 @@
+.post-container {
+    border: 1px solid rgba(177, 164, 164, 0.733);
+    border-radius: 5px;
+    box-shadow: 1px;
+    width: 600px;
+    margin: 20px auto;
+}
+
+.post-container img {
+    width: 600px;
+    
+}
+
+.post-header {
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.post-header img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 3%;
+}
+
+.post-header h3 {
+    margin-left: 2%;
+}
+
+.likes {
+    display: flex;
+    margin-left: 2%;
+}
+
+.post-container input {
+    width: 100px;
+    outline: none;
+    height: 50px;
+    margin-top: 1%;
+}

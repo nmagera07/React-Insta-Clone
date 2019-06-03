@@ -4,9 +4,10 @@ import React from 'react'
 const Comment = (props) => {
     console.log(props)
         return(
-            <div>
-                <h1>{props.comment.username}</h1>
-               <h1>{props.comment.text}</h1>
+            <div className="comments">
+                <h3>{props.comment.username}</h3>
+                <p>{props.comment.text}</p>
+                
             </div>
         )
     

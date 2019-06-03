@@ -5,14 +5,24 @@ class Post extends React.Component{
     render() {
         console.log(this.props)
         return(
-        <div>
-          <h3>{this.props.posts.username}</h3> 
-           <img src={this.props.posts.thumbnailUrl} alt="username-pic" />
-           <img src={this.props.posts.imageUrl} alt="pictures" />
-          <p>{this.props.posts.likes} likes</p> 
-         
-         {this.props.posts.comments.map(comment =>
+        <div className="post-container"> 
+            <div className="post-header">
+                <img src={this.props.posts.thumbnailUrl} alt="username-pic" />
+                <h3>{this.props.posts.username}</h3>
+            </div>
+           
+                <img src={this.props.posts.imageUrl} alt="pictures" />
+           
+            <div className="likes">
+                <p>{this.props.posts.likes} likes</p>
+            </div>
+             
+            
+            {this.props.posts.comments.map(comment =>
             <Comment comment={comment} />)}
+            <input placeholder="Enter a comment here...">
+                
+                </input>
         </div>
     )
     }
