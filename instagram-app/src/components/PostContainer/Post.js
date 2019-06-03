@@ -3,14 +3,16 @@ import Comment from '../CommentSection/Comment'
 
 class Post extends React.Component{
     render() {
+        console.log(this.props)
         return(
         <div>
-          <h3><img src={this.props.posts.thumbnailUrl} alt="username-pic" /> {this.props.posts.username}</h3> 
-           
+          <h3>{this.props.posts.username}</h3> 
+           <img src={this.props.posts.thumbnailUrl} alt="username-pic" />
            <img src={this.props.posts.imageUrl} alt="pictures" />
           <p>{this.props.posts.likes} likes</p> 
          
-         <Comment comments={this.props.posts.comments}/>
+         {this.props.posts.comments.map(comment =>
+            <Comment comment={comment} />)}
         </div>
     )
     }

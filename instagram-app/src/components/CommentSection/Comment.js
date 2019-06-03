@@ -1,10 +1,12 @@
 import React from 'react'
-import Post from '../PostContainer/Post'
+
 
 const Comment = (props) => {
+    console.log(props)
         return(
             <div>
-               <h1>{props.comments.text}</h1>
+                <h1>{props.comment.username}</h1>
+               <h1>{props.comment.text}</h1>
             </div>
         )
     

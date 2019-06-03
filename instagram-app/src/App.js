@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './components/SearchBar/search.css'
 import Post from './components/PostContainer/Post'
 import dummyData from './dummy-data';
 import Search from './components/SearchBar/Search'
