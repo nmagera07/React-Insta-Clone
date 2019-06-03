@@ -23,6 +23,7 @@
     height: 30px;
     border-radius: 5px;
     outline: none;
+    text-align: center;
 }
 
 .search-left {

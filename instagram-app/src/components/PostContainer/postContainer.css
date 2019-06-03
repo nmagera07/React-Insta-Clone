@@ -31,11 +31,32 @@
 .likes {
     display: flex;
     margin-left: 2%;
+    margin-top: -2%;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
 .post-container input {
-    width: 100px;
+    width: 99%;
     outline: none;
     height: 50px;
     margin-top: 1%;
+    border: 0;
+    font-size: 0.8rem;
+}
+
+.comment-bar {
+    border-top: 1px solid rgba(218, 207, 207, 0.733);
+    margin-top: 1%;
+}
+
+.picture-icons {
+    display: flex;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.picture-icons img {
+    height: 35px;
+    widtH: 35px;
 }
