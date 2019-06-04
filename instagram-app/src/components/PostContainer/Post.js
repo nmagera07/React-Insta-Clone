@@ -2,23 +2,19 @@ import React from 'react'
 import Comment from '../CommentSection/Comment'
 
 class Post extends React.Component{
-    state = {
-        comment: ""
+    constructor(props) {
+        super(props)
+        this.state = {
+            likes: props.posts.likes
+        }
     }
 
-    handleChanges = e => {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
+    addingLikes = () => {
+        let likes = this.state.likes + 1
+        this.setState({ likes })
     }
 
-    addComment = e => {
-    e.preventDefault();
-        this.props.addComment(this.state.comment);
-        this.setState({
-        comment: ""
-        });
-    };
+    
 
     render() {
         let moment = require('moment');
@@ -30,12 +26,12 @@ class Post extends React.Component{
             </div>
            
                 <img src={this.props.posts.imageUrl} alt="pictures" />
-            <div className="picture-icons">
-                <a href="#"><img src="http://www.transparentpng.com/thumb/instagram-heart/OtpLVC-heart-shaped-instagram-transparent-image.png" alt="heart picture"/></a>
+            <div className="picture-icons" >
+                <img src="http://www.transparentpng.com/thumb/instagram-heart/OtpLVC-heart-shaped-instagram-transparent-image.png" alt="heart picture" />
                 <img src="http://chittagongit.com/images/instagram-comment-bubble-icon/instagram-comment-bubble-icon-12.jpg" alt="comment picture" />
             </div>
             
-            <div className="likes">
+            <div className="likes" >
                 <p>{this.props.posts.likes} likes</p>
             </div>
              
