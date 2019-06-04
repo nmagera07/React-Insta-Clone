@@ -1,6 +1,7 @@
 .comments {
     display: flex;
     width: 600px;
+    height: 35px;
 }
 
 .comments h3 {

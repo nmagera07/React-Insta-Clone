@@ -12,16 +12,36 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      dummyData: dummyData,
+      dummyData: []
     }
   }
+
+  componentDidMount() {
+    this.state = {
+      dummyData
+    }
+  }
+
+  addComment = commentName => {
+    
+    const newComment = {
+      dummyData: commentName,
+      id: Date.now(),
+    };
+    this.setState(prevState => {
+      return {
+        dummyData: [...prevState.dummyData, newComment]
+      };
+    });
+  };
+
   render() {
     return (
     <div className="App">
       <div>
         <Search />
-        {this.state.dummyData.map(e => ( 
-            <Post key={e.id} posts={e} />
+        {dummyData.map(e => ( 
+            <Post addComment={this.addComment} key={e.id} posts={e} />
         ))}
         
       </div>

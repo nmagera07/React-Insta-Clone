@@ -11,6 +11,12 @@
     
 }
 
+.post-container h2 {
+    font-size: 0.7rem;
+    display: flex;
+    margin-left: 2%;
+}
+
 .post-header {
     display: flex;
     margin-top: 2%;
