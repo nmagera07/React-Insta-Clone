@@ -1,54 +1,25 @@
-import React from 'react';
-import './App.css';
-import './components/SearchBar/search.css'
-import './components/PostContainer/postContainer.css'
-import './components/CommentSection/comments.css'
-import Post from './components/PostContainer/Post'
-import dummyData from './dummy-data';
-import Search from './components/SearchBar/Search'
+import React, { Component } from "react";
+import "./App.css";
+import PostsPage from "./components/PostContainer/PostsPage";
+import LoginPage from "./components/Login/LoginPage";
+import withAuthenticate from "./components/Authentication/withAuthenticate";
 
 
-class App extends React.Component {
+class App extends Component {
   constructor() {
-    super()
-    this.state = {
-      dummyData: []
-    }
+    super();
+    this.state = {};
   }
-
-  componentDidMount() {
-    this.state = {
-      dummyData
-    }
-  }
-
-  addComment = commentName => {
-    
-    const newComment = {
-      dummyData: commentName,
-      id: Date.now(),
-    };
-    this.setState(prevState => {
-      return {
-        dummyData: [...prevState.dummyData, newComment]
-      };
-    });
-  };
 
   render() {
     return (
-    <div className="App">
-      <div>
-        <Search />
-        {dummyData.map(e => ( 
-            <Post addComment={this.addComment} key={e.id} posts={e} />
-        ))}
-        
+      <div className="App">
+        <ComponentFromWithAuthenticate />
       </div>
-    </div>
-  );
+    );
   }
-  
 }
+
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)(LoginPage);
 
 export default App;

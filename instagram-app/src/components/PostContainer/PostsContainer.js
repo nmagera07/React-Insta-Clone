@@ -1,13 +1,13 @@
-import React from 'react'
-import Post from './Post'
-import '../PostContainer/postContainer.css'
+import React from 'react';
+import Post from './Post';
 
-const PostsContainer = (props) => {
-    return (
-        <div>
-            {props.posts.map(post => <Post key={post.id} post={post} />)}
-        </div>
-    )
-}
 
-export default PostsContainer
+const PostsContainer = props => {
+  return (
+    <div className="posts-container-wrapper">
+      {props.posts.map(p => <Post key={p.imageUrl} post={p} />)}
+    </div>
+  );
+};
+
+export default PostsContainer;
