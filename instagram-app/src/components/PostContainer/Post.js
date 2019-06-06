@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSectionContainer';
 import LikeSection from './LikeSection';
 import PostHeader from './PostHeader';
-
+import './post.css'
 
 
 class Post extends React.Component {
@@ -13,10 +13,13 @@ class Post extends React.Component {
       likes: props.post.likes
     };
   }
+
   incrementLike = () => {
     let likes = this.state.likes + 1;
     this.setState({ likes });
   };
+
+
   render() {
     return (
       <div className="post-border">
@@ -24,7 +27,7 @@ class Post extends React.Component {
           username={this.props.post.username}
           thumbnailUrl={this.props.post.thumbnailUrl}
         />
-        <div className="post-image-wrapper">
+        <div>
           <img
             alt="post thumbnail"
             className="post-image"

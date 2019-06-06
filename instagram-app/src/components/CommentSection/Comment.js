@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {CommentDiv,  } from './CommentSectionStyledComponents'
 
 
 const Comment = props => {
   return (
-    <div className="comment-text">
-      <span className="comment">{props.comment.text}</span>{' '}
-      <span className="user">-{props.comment.username}</span>
-    </div>
+    <CommentDiv>
+      <span className="usernames">{props.comment.username}</span>{' '}
+      <span>{props.comment.text}</span>
+    </CommentDiv>
   );
 };
 

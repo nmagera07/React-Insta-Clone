@@ -1,18 +1,18 @@
 import React from 'react';
-
+import { Image, Header, Username, HeaderDiv} from './PostContainerStyledComponents' 
 
 const PostHeader = props => {
   return (
-    <div className="post-header">
-      <div className="post-thumb-wrapper">
-        <img
+    <Header>
+      <HeaderDiv>
+        <Image
           alt="post header"
           className="post-thumb"
           src={props.thumbnailUrl}
         />
-      </div>
-      <div>{props.username}</div>
-    </div>
+      <Username>{props.username}</Username>
+      </HeaderDiv>
+    </Header>
   );
 };
 

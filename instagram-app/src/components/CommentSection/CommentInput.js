@@ -1,15 +1,18 @@
 import React from 'react';
+import { CommentInputForm, OuterDiv } from './CommentSectionStyledComponents'
 
 const CommentInput = props => {
   return (
+    <OuterDiv>
     <form onSubmit={props.submitComment}>
-      <input
+      <CommentInputForm
         type="text"
         value={props.comment}
         placeholder="Add comment... "
         onChange={props.changeComment}
       />
     </form>
+    </OuterDiv>
   );
 };
 
